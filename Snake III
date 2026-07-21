@@ -1,5 +1,0 @@
-if (score > bestScore) {
-  bestScore = score;
-  bestScoreElement.textContent = bestScore;
-  localStorage.setItem("neonSnakeBest", String(bestScore));
-}
