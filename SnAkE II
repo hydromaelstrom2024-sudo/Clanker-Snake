@@ -1,0 +1,9 @@
+oscillator.type = "sine";
+oscillator.frequency.value = frequency;
+gain.gain.setValueAtTime(0.08, audioContext.currentTime);
+gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + duration);
+
+oscillator.connect(gain);
+gain.connect(audioContext.destination);
+oscillator.start();
+oscillator.stop(audioContext.currentTime + duration);
