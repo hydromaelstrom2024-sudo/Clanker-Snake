@@ -1,0 +1,42 @@
+<section class="scoreboard" aria-label="Game statistics">
+  <article>
+    <span>Score</span>
+    <strong id="score">0</strong>
+  </article>
+  <article>
+    <span>Best</span>
+    <strong id="bestScore">0</strong>
+  </article>
+  <article>
+    <span>Level</span>
+    <strong id="level">1</strong>
+  </article>
+</section>
+
+<section class="board-frame">
+  <canvas id="gameCanvas" width="600" height="600" aria-label="Snake game board"></canvas>
+  <div id="overlay" class="overlay">
+    <div class="overlay-card">
+      <p id="overlayLabel" class="eyebrow">READY?</p>
+      <h2 id="overlayTitle">Feed the snake.</h2>
+      <p id="overlayText">Use arrow keys, WASD, or the controls below.</p>
+      <button id="startButton" class="primary-button">Start game</button>
+    </div>
+  </div>
+</section>
+
+<div class="actions">
+  <button id="pauseButton" class="secondary-button" disabled>Pause</button>
+  <button id="restartButton" class="secondary-button">Restart</button>
+</div>
+
+<section class="mobile-controls" aria-label="Touch controls">
+  <button class="control up" data-direction="up" aria-label="Move up">▲</button>
+  <button class="control left" data-direction="left" aria-label="Move left">◀</button>
+  <button class="control down" data-direction="down" aria-label="Move down">▼</button>
+  <button class="control right" data-direction="right" aria-label="Move right">▶</button>
+</section>
+
+<footer>
+  Arrow keys / WASD to move · Space to pause
+</footer>
