@@ -1,0 +1,11 @@
+let eyes;
+if (direction.x === 1) eyes = [[17, 7], [17, 16]];
+else if (direction.x === -1) eyes = [[7, 7], [7, 16]];
+else if (direction.y === -1) eyes = [[7, 7], [16, 7]];
+else eyes = [[7, 17], [16, 17]];
+
+eyes.forEach(([x, y]) => {
+  ctx.beginPath();
+  ctx.arc(baseX + x, baseY + y, 1.8, 0, Math.PI * 2);
+  ctx.fill();
+});
