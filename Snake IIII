@@ -1,0 +1,9 @@
+const gradient = ctx.createLinearGradient(x, y, x + size, y + size);
+gradient.addColorStop(0, index === 0 ? "#c6ff5e" : "#65ffa7");
+gradient.addColorStop(1, index === 0 ? "#51ff9c" : "#1ddc7b");
+ctx.fillStyle = gradient;
+ctx.shadowColor = "rgba(81, 255, 156, 0.32)";
+ctx.shadowBlur = index === 0 ? 14 : 6;
+drawRoundedRect(x, y, size, size, index === 0 ? 7 : 6);
+ctx.fill();
+ctx.shadowBlur = 0;
